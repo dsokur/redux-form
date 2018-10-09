@@ -1,0 +1,105 @@
+$color-green: #28a745;
+$color-white: #fff;
+
+.modal{
+  row{
+    justify-content: center;
+  }
+  &_wrap {
+    display: flex;
+    justify-content: space-between;
+    &_multiple{
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    select{
+      width: 100%;
+      height: 100%;
+    }
+    input{
+      width: 100%;
+    }
+    &_row{
+      margin-bottom: 10px;
+      &_test{
+        position:relative;
+        display: inline-block;
+        margin: 0 10px;
+        div{
+          display: inline-block;
+        }
+      }
+    }
+    &_button{
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+  }
+  &_title{
+    display: inline-block;
+  }
+  &_close{
+    float: right;
+    border: 0;
+    background: none;
+  }
+  &_profit{
+    border: 1px solid;
+    text-align: center;
+    background-color: $color-white;
+    table{
+      width: 100%;
+    }
+  }
+  &_navigation{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+}
+.root {
+  .top{
+    height: 160px;
+    position: relative;
+    margin: 0;
+    img{
+      height: 100%;
+      left: 0;
+      -o-object-fit: cover;
+      object-fit: cover;
+      top: 0;
+      -ms-transform: none;
+      -moz-transform: none;
+      -webkit-transform: none;
+      transform: none;
+      width: 100%;
+      -webkit-filter: brightness(0.8);
+      filter: brightness(0.8);
+    }
+    &_branding{
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      &_title{
+        color: $color-white;
+        opacity: 1;
+        position: relative;
+        a{
+          color: $color-white;
+          font-size: 36px;
+          font-weight: 800;
+          text-transform: uppercase;
+        }
+        p{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .menu{
+    display: flex;
+    justify-content: center;
+  }
+}

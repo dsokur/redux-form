@@ -4,20 +4,16 @@ import './index.css';
 import App from './containers/App';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
+import configureStore from './store/configureStore';
+import { Provider } from 'react-redux';
 
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import DropShipping from './reducers/index'
 
-let store = createStore(DropShipping)
+const store = configureStore();
 
 ReactDOM.render(
     <Provider store={store}>
-    <App />
+        <App />
     </Provider>,
 document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();

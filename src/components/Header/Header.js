@@ -7,7 +7,7 @@ class Header extends Component {
   render() {
     return (
       <div className='row top'>
-          <img src={background}/>
+          <img src={background} alt='header_back'/>
           <div className='top_branding'>
               <div className='top_branding_title'>
                   <a href="https://drop.grabley.net/" rel="home">Grabley Dropshipping Tools (2.1.4)</a>

@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import '../../App.scss';
+import './../../App.scss';
 import Modal from 'react-modal';
-import SalesForm from "../../forms/sales";
-import SupplierForm from "../../forms/supplier";
-import photo from '../../assets/photo.gif';
+import SalesForm from './../../containers/SalesForm';
+import SupplierForm from "./../../containers/SupplierForm";
+import photo from './../../assets/photo.gif';
 import { Button} from "antd";
 import "antd/dist/antd.css";
 
 
-
 const customStyles = {
     content : {
-        width:'90%',
+        // width:'90%',
         // height:'90%',
         top                   : '50%',
         left                  : '50%',
@@ -19,26 +18,20 @@ const customStyles = {
         bottom                : 'auto',
         marginRight           : '-50%',
         transform             : 'translate(-50%, -50%)',
-        background            : '#D3D3D3'
+        background            : '#D3D3D3',
+
 
     }
 };
 
 Modal.setAppElement('#root');
 
-
-
 class Main extends Component {
-    submitsales = values => {
-        // print the form values to the console
-        console.log(values)
-    };
 
     render() {
-        // console.log(this.props,'mainProps');
-        // console.log(this.props.salesFormData,'data');
+        {console.log(this.props,'mainProps')}
         return (
-            <div>
+            <div className='main'>
                 <Button onClick={this.props.openModal} className='addButton'> Добавить товар </Button>
                 <Modal
                     isOpen={this.props.modalIsOpen}
@@ -52,7 +45,7 @@ class Main extends Component {
                             <SalesForm onSubmit={this.props.receiveSalesFormData}/>
                         </div>
                         <div className='col-md-6'>
-                            <SupplierForm onSubmit={this.submitsales}/>
+	                        <SupplierForm onSubmit={this.props.receiveSupplierFormData}/>
                         </div>
 
                     </div>

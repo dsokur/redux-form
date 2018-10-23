@@ -1,6 +1,6 @@
-import { createStore } from 'redux' /*create store*/
-import DropShipping from '../reducers/index' /*import combine reducer to store*/
+import configureStore from './configureStore'
 
 
-let store = createStore(DropShipping);
+const store = configureStore();
+export default store;
 

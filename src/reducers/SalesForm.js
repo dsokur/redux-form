@@ -1,12 +1,15 @@
-import * as constants from '../constants/constants'/*import all constants*/
+import * as constants from "../constants/constants";
 
-const initialState = {
-    salesFormData:[]
+
+
+export default (state = {}, action) => {
+    const { payload } = action;
+    switch (action.type) {
+        case constants.LOAD_SALESFORM:
+            return {
+                data: payload.data
+            };
+        default:
+            return state;
+    }
 };
-
-export default (state = initialState, action) =>{
-    return Object.assign({}, {
-        ...state,
-        salesFormData: action
-    })
-}

@@ -1,18 +1,12 @@
-/*combiner for main reducer*/
 import { combineReducers } from 'redux'
-import { reducer as formReducer } from 'redux-form'
-/*import other reducers*/
-// import App from './App'
-// import Header from './Header'
+import { reducer as form } from 'redux-form'
 import Main from './Main'
 import SalesForm from './SalesForm'
+import SupplierForm from './SupplierForm'
 
-const DropShipping = combineReducers({
-    // App,
-    // Header,
+export default combineReducers({
     Main,
     SalesForm,
-    form: formReducer
+    SupplierForm,
+    form
 });
-
-export default DropShipping

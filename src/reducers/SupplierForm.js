@@ -1,12 +1,13 @@
 import * as constants from "../constants/constants";
-const initialState ={
-    supplier:'yeeee'
-};
 
-export default (state = initialState, action) =>{
+
+export default (state = {}, action) =>{
+    const { payload } = action;
     switch (action.type) {
-        case constants.SEND_SUPPLIERFORM:
-            return action.data;
+        case constants.LOAD_SUPPLIERFORM:
+            return {
+                data: payload.data
+            };
         default:
             return state;
     }

@@ -7,8 +7,8 @@ import selectField from './Fields/selectField';
 
 
 const SalesForm = props => {
-    const { handleSubmit, loadSalesFormData } = props;
-    {console.log(props,'initialValues')}
+    const { handleSubmit } = props;
+    {console.log(props,'form Props')}
     return (
         <form>
             <p>Продажа</p>
@@ -24,7 +24,6 @@ const SalesForm = props => {
 
             <div className='modal_wrap_button'>
                 <Button onClick={handleSubmit} type="submit" >Получить данные магазина</Button>
-                <Button onClick={()=>loadSalesFormData()} type="submit" >Load</Button>
             </div>
         </form>
     );

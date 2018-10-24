@@ -7,7 +7,7 @@ import {reduxForm} from "redux-form";
 
 const mapStateToProps = (state) => ({ /*dispose state to props*/
     /*variableName.reducerName.initialStateKey*/
-	supplier: state.SupplierForm.supplier
+    initialValues: state.SupplierForm.data,
 });
 
 

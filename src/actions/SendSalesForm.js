@@ -3,13 +3,13 @@ import * as constants from '../constants/constants';
 
 function sendSalesForm(json) {  /*action creator*/
     return {
-        link: json.link,
-        shop: json.shop
+            link: json.link,
+            shop: json.shop,
     }
 }
 
 function loadSalesFormData(data){
-    {console.log(data,'action test')}
+    console.log(data,'data');
     return {
         type: constants.LOAD_SALESFORM, /*type of action being performed*/
         payload: {
@@ -18,6 +18,7 @@ function loadSalesFormData(data){
     };
 }
 export const receiveSalesFormData = (values) => {
+    console.log(values.link,'receiveSalesFormData');
     return (dispatch) => {
         $.ajax('http://74.208.183.194:8888/api/v1/dropshipping/fetch-product-data/buyer/', {
             headers: {

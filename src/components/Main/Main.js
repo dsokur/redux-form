@@ -29,7 +29,7 @@ Modal.setAppElement('#root');
 class Main extends Component {
 
     render() {
-        {console.log(this.props,'mainProps')}
+        {console.log(this.props.receiveSupplierFormData,'mainProps')}
         return (
             <div className='main'>
                 <Button onClick={this.props.openModal} className='addButton'> Добавить товар </Button>
